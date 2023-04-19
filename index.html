@@ -27,6 +27,17 @@
 </head>
 <body>
     <div class="container">
+   <div class="row">
+	<div id="alert" class="alert alert-primary" role="alert">
+		 <p>
+		 data if from api.openweathermap.org
+		 </p>
+		 <p>
+		 pass in parameters in the query string with your lat, long and api key.
+		 e.g  /LastYearsweather/?lat=-41.28&lon=174.78&appid=099221b17bcfa72e2aa8a90axxxxxxxx
+		 </p>
+	</div>
+   </div>
         <div class="row">
             <div class="col-md-6">
                 <div id="current" class="col">
@@ -87,6 +98,12 @@
         var lat = urlParams.get('lat')//-41.28;
         var lon = urlParams.get('lon')// 174.78;
         var appid = urlParams.get('appid')// =""
+
+		if(lat && lon && appid){
+		$("alert").hide();
+		}
+
+
 
         var lastYear = Math.floor(new Date().getTime() / 1000.0) - 31449575;
         //1681533859
