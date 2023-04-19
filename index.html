@@ -169,7 +169,7 @@
 
                     var date = new Date(response.data[0].dt * 1000);
                     //var td = "<td>" + date.toLocaleTimeString() + "</td>";
-                    var td = "<td>" + response.data[0].temp + " &deg;C</td><td><b>" + response.data[0].weather[0].main + "</b><br/>" + response.data[0].weather[0].description + "</td>";
+                    var td = "<td style='border-left:double'>" + response.data[0].temp + " &deg;C</td><td><b>" + response.data[0].weather[0].main + "</b><br/>" + response.data[0].weather[0].description + "</td>";
                     console.log(td);
                     _row.append(td);
                 }
